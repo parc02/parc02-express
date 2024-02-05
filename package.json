@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/parc02/parc02-express/issues"
   },
-  "homepage": "https://github.com/parc02/parc02-express#readme"
+  "homepage": "https://github.com/parc02/parc02-express#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
