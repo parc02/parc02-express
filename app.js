@@ -1,21 +1,11 @@
 const express = require('express')
-const app = express()
-const port = 3000
+const router = express.Router();
 
-app.get('/', (req, res) => {
-    res.send('Hello World!!!!')
-})
+router.get('/artist/:id', function (req, res) {
+    console.log("id는 "+req.params.id +"입니다")
+    res.send("id : "+res.params.id)
+});
 
-app.listen(port,() => {
-    console.log(`Example app listening on port ${port}`)
-})
-
-//
-//app.get('/', (req, res) => {
-//    let myJson={"Hello":"World"}
-//    res.json(myJson)
-//})
-//
-//app.listen(port, () =>{
-//    console.log(`Example app listening on port ${port}`)
-//})
+router.get('/artists/:id/conpany/:company', function(req, res) {
+    res.send("id : " +req.params.id +"회사 : "+ req.params.company)
+});
